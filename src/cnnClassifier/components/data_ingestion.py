@@ -22,8 +22,6 @@ class DataIngestion:
             zip_download_dir = self.config.local_data_file
             os.makedirs("artifacts/data_ingestion", exist_ok=True)
             logger.info(f"Downloading data from {dataset_url} into file {zip_download_dir}")
-
-            file_id = dataset_url.split("/")[-2]
             prefix = 'https://drive.usercontent.google.com/uc?id=1euOy1koufzNUmLe1V8pHNUT6nZsEbJSW&export=download'
             gdown.download(prefix,zip_download_dir)
 

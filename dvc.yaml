@@ -36,7 +36,7 @@ stages:
       - BATCH_SIZE
       - AUGMENTATION
     outs:
-      - artifacts/training/model.h5
+      - model/model.h5
 
 
   evaluation:
@@ -45,7 +45,7 @@ stages:
       - src/cnnClassifier/pipeline/evaluation_pipeline.py
       - config/config.yaml
       - artifacts/data_ingestion/data
-      - artifacts/training/model.h5
+      - model/model.h5
     params:
       - IMAGE_SIZE
       - BATCH_SIZE
